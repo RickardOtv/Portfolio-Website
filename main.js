@@ -1,4 +1,4 @@
-import "./style.css";
+//import "./style.css";
 // import { OrbitControls } from "./lib/three/examples/jsm/controls/OrbitControls.js";
 import * as THREE from "https://cdn.skypack.dev/three@0.142.0/build/three.module";
 // Setup
@@ -59,12 +59,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("public/space.jpg");
 scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load("/face.png");
+const jeffTexture = new THREE.TextureLoader().load("public/face.png");
 
 const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
@@ -72,8 +72,8 @@ scene.add(jeff);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load("/moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("/normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("public/moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("public/normal.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
